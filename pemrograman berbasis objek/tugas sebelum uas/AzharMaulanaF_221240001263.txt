@@ -1,0 +1,34 @@
+//Azhar Maulana Ferdiansyah
+// NIM 211240001263
+//MATA Kuliah : Pemrograman Berbasis Objek
+//
+
+class Lingkaran {
+  late double _jariJari;
+  Lingkaran(double jariJari) {
+    if (jariJari < 0) {
+      _jariJari = -jariJari;
+    } else {
+      _jariJari = jariJari;
+    }
+  }
+  double get luas => 3.14 * _jariJari * _jariJari;
+  double get jariJari => _jariJari;
+  set jariJari(double jariJari) {
+    if (jariJari < 0) {
+      _jariJari = -jariJari;
+    } else {
+      _jariJari = jariJari;
+    }
+  }
+}
+
+void main() {
+  double jariJari = 5.0;
+  Lingkaran lingkaran = Lingkaran(jariJari);
+  print('Jari-jari lingkaran : ${lingkaran.jariJari}');
+  print('Luas lingkaran : ${lingkaran.jariJari}');
+  lingkaran.jariJari = -7.0;
+  print('Jari-jari lingkaran setelah diubah : ${lingkaran.jariJari}');
+  print('Luas lingkaran seteah diubah : ${lingkaran.luas}');
+}
